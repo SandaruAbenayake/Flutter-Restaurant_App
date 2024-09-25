@@ -1,4 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:foodspot/widget/basicButton.dart';
 import 'package:foodspot/widget/basicText.dart';
@@ -16,10 +15,7 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
-  Future _login() async {
-    await FirebaseAuth.instance.signInWithEmailAndPassword(
-        email: _usernameController.text.trim(),
-        password: _passwordController.text.trim());
+  void _login() {
     if (_formKey.currentState!.validate()) {
       // Perform login action
       String username = _usernameController.text;

@@ -43,7 +43,7 @@ class _NavigationPageState extends State<NavigationPage> {
             ),
             actions: [
               IconButton(
-                  onPressed: () {Navigator.push(context, MaterialPageRoute(builder:(context) => Cart(),));},
+                  onPressed: () {},
                   icon: const Icon(Icons.shopping_cart_outlined))
             ],
           )),
