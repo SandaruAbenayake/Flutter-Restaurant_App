@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "268853234934",
+    "project_id": "foodspot-30d87",
+    "storage_bucket": "foodspot-30d87.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:268853234934:android:af5ada18487b79489770d7",
+        "android_client_info": {
+          "package_name": "com.example.foodspot"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsBfcFLmv-S4ozPsXSKZY051-oKsSOgc8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
