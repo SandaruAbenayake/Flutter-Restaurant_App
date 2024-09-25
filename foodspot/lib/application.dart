@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:foodspot/screen/cart.dart';
 import 'package:foodspot/screen/login.dart';
+import 'package:foodspot/screen/navigationPage.dart';
+import 'package:foodspot/screen/signup.dart';
 import 'package:foodspot/screen/stratup.dart';
 
 class Application extends StatefulWidget {
@@ -14,7 +17,7 @@ class _ApplicationState extends State<Application> {
   Widget build(BuildContext context) {
     return const Scaffold(
       
-      body: Stratup()
+      body: NavigationPage()
     );
   }
 }

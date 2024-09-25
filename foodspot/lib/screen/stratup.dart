@@ -26,18 +26,18 @@ class Stratup extends StatelessWidget {
                     "FoodSpot",
                     style: TextStyle(
                       color: Color(
-                          0xFF4E342E), // Rich brown color, often associated with food and restaurants
-                      fontSize: 58.0, // Large size for brand name visibility
-                      fontWeight: FontWeight.w900, // Bold for strong brand presence
-                      fontFamily: 'Roboto', // A stylish serif font, good for elegance
+                          0xFF4E342E), 
+                      fontSize: 58.0, 
+                      fontWeight: FontWeight.w900, 
+                      fontFamily: 'Roboto', 
                       letterSpacing:
-                          1.5, // Add space between letters for a modern look
+                          1.5, // 
                       shadows: [
                         Shadow(
-                          offset: Offset(5.0, 8.0), // Adds shadow for depth
-                          blurRadius: 9.0, // Softens the shadow
+                          offset: Offset(5.0, 8.0), 
+                          blurRadius: 9.0, 
                           color: Color.fromARGB(
-                              157, 228, 196, 16), // Light shadow effect
+                              157, 228, 196, 16), 
                         ),
                       ],
                     ),

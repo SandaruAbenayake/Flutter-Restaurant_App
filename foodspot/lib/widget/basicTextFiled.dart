@@ -5,10 +5,12 @@ class BasicTextFiled extends StatefulWidget {
       {super.key,
       required this.hint,
       required this.controller,
-      required this.isPasswordFiled});
+      required this.isPasswordFiled,
+      this.prefixIcon});
   final String hint;
   final TextEditingController controller;
   final bool isPasswordFiled;
+  final IconData? prefixIcon;
 
   @override
   State<BasicTextFiled> createState() => _BasicTextFiledState();
@@ -23,6 +25,8 @@ class _BasicTextFiledState extends State<BasicTextFiled> {
         TextField(
           obscureText: isShowPassword,
           decoration: InputDecoration(
+              prefixIcon:
+                  widget.prefixIcon == null ? null : Icon(widget.prefixIcon),
               suffixIcon: widget.isPasswordFiled
                   ? IconButton(
                       onPressed: () {

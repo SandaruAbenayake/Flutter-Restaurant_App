@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foodspot/widget/basicButton.dart';
+import 'package:foodspot/widget/basicText.dart';
+import 'package:foodspot/widget/basicTextFiled.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -13,7 +15,6 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
-
   void _login() {
     if (_formKey.currentState!.validate()) {
       // Perform login action
@@ -23,46 +24,74 @@ class _LoginPageState extends State<LoginPage> {
       // Navigate to another screen or show a message
     }
   }
-  
+
   @override
   Widget build(BuildContext context) {
-    return  Padding(
-        padding: EdgeInsets.all(16.0),
-        child: Form(
-          key: _formKey,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              TextFormField(
-                controller: _usernameController,
-                decoration: InputDecoration(labelText: 'Username'),
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Please enter your username';
-                  }
-                  return null;
-                },
-              ),
-              SizedBox(height: 16.0),
-              TextFormField(
-                controller: _passwordController,
-                decoration: InputDecoration(labelText: 'Password'),
-                obscureText: true,
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Please enter your password';
-                  }
-                  return null;
-                },
-              ),
-              SizedBox(height: 32.0),
-              ElevatedButton(
-                onPressed: _login,
-                child: Text('Login'),
-              ),
-            ],
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(60),
+          child: AppBar(
+            backgroundColor: Colors.white,
+            title: const Text(
+              "FoodSpot",
+              style: TextStyle(
+                  fontFamily: 'RobotoMono',
+                  fontWeight: FontWeight.w600,
+                  fontSize: 40),
+            ),
+          )),
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Container(
+          color: const Color.fromARGB(255, 236, 236, 236),
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                const BasicText(
+                    lable: "Login", size: 25, weight: FontWeight.w500),
+                const SizedBox(
+                  height: 25,
+                ),
+                const BasicText(
+                    lable: "Username", size: 15, weight: FontWeight.w300),
+                BasicTextFiled(
+                    hint: "Enter your email",
+                    controller: _usernameController,
+                    isPasswordFiled: false),
+                const BasicText(
+                    lable: "Password", size: 15, weight: FontWeight.w300),
+                BasicTextFiled(
+                    hint: "*****",
+                    controller: _usernameController,
+                    isPasswordFiled: true),
+                Basicbutton(
+                  function: () {},
+                  fontColor: Colors.white,
+                  fontSize: 20,
+                  bColor: Colors.black,
+                  width: 50,
+                  lable: 'LOGIN',
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Basicbutton(
+                  function: () {},
+                  fontColor: Colors.black,
+                  fontSize: 20,
+                  bColor: Colors.white,
+                  width: 0,
+                  lable: 'NEW IN FOODSPOT',
+                )
+              ],
+            ),
           ),
         ),
-      );
+      ),
+    );
   }
-  }
+}
